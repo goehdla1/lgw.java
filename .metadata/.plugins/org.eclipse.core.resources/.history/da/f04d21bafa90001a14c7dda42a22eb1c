@@ -1,0 +1,49 @@
+package com.ict.edu;
+
+public class Ex08 {
+	public static void main(String[] args) {
+		// 중첩 while 문 : while문 안에 while문
+		// 다중 for문과 같다.
+		for (int i = 1; i < 4; i++) {
+			for (int j = 1; j < 6; j++) {
+				System.out.println("i=" + i + ", j = " + j);
+
+			}
+
+		}
+		System.out.println();
+
+		int k1 = 1;
+		while (k1 < 4) {
+
+			int k2 = 1;
+			while (k2 < 6) {
+				System.out.println("k1=" + k1 + ", k2 = " + k2);
+
+				k2++;
+			}
+			k1++;
+		}
+		
+		//구구단
+		int k3 = 2;
+		while (k3 < 9) {
+			int k4 = 1;
+			while (k4 < 9) {
+				System.out.println(k3+"*"+ k4 + "="+ k3*k4);
+				k4++;
+			}
+			k3++;
+		}
+		int k5 = 2;
+		while (k5 < 9) {
+			int k6 = 1;
+			while (k6 < 9) {
+				System.out.print(k5+"*"+ k5 + "="+ k6*k6 + " ");
+				k6++;
+			}
+			k5++;
+		}
+		
+	}
+}

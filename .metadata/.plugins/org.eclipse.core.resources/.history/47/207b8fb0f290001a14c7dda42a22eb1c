@@ -1,0 +1,101 @@
+package com.ict.edu;
+
+public class Ex07 {
+	public static void main(String[] args) {
+		// while 문 : for 문과 같은 반복문
+		// 형식1 : 
+		//						초기식
+		//						while(조건식){
+		//						조건식이 참일때 실행;
+		//							증감식;
+		//						}
+		//	while문은 끝을 만나면 무조건 조건식으로 가라.
+	
+    	// 형식2 : 
+		//						초기식
+		//						while(true){
+		//						if(빠져나갈조건) - break;
+		//						조건식이 참일때 실행;
+		//							증감식;
+		//						}
+		//	while문은 끝을 만나면 무조건 조건식으로 가라.
+	
+		// 0 - 10 까지 출력.
+		for (int i = 0; i < 11; i++) {
+			System.out.print(i + " ");
+			
+		}
+		System.out.println();
+		
+		int k1 = 0;  //  ==> 초기식
+		while (k1 < 11) { // ==> 끝나는 조건을 알때 많이 사용됨.
+			System.out.print(k1 + " ");
+			k1++;	// ==> 증감식
+		}
+		
+		System.out.println();
+		
+		int k2 = 0;
+		while (true) { // ==> 끝나는 조건이 나중에 들어올때 많이 사용됨.
+			System.out.print(k2 + " ");
+			k2++;
+			if(k2 > 10) break; // ==> 거짓 으로 만들어야. 빠져나가지 않늗나.
+		}
+		System.out.println();
+		
+		// 0 ~ 10까지 짝수만 출력하기.
+		int k3 = 0;
+		while (k3 < 11) {
+			if (k3 % 2 == 0) {
+				System.out.print(k3+" ");
+					}
+			k3++;
+		}
+		
+		// 0 ~ 10까지 홀수만 출력하기.
+		int k4 = 0;
+		while (k3 < 11) {
+			if (k4 % 2 == 1) {
+				System.out.print(k4+" ");
+					}
+			k4++;
+		}
+
+		// 0 ~ 50 까지 7의 배수 출력
+		
+		int k5 = 0;
+		while (k5 >= 0) {
+			if (k5 % 7 == 0) {
+				if(k5 > 50) break;
+				System.out.print(k5 +" ");
+			}
+			k5++;
+		}
+		
+		
+		// a - g
+		
+		char k6 = 'a';
+		while (k6 >= 'a') {
+			System.out.print(k6 + " ");
+			if(k6 > 'g') break;
+			k6++;
+		}
+		
+		// 구구단 5단 출력하기.
+		
+		int k7 = 0;
+		while (k7<10) {
+			k7++;
+			System.out.println("5*k7 = " + 5*k7);
+			
+			
+		}
+		
+				// 0 0 0 0
+				// 0 0 0 0
+				// 0 0 0 0
+				// 0 0 0 0
+		
+	}
+}
