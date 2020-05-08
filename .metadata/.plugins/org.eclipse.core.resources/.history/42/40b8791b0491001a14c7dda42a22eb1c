@@ -162,13 +162,12 @@ public class Ex07 {
 			sum3 = sum3 + v4;
 				
 				
-			} else {sum4 = sum4 + v4;
+			} else {
 				
 			}
 			v4++;
 		}
-		System.out.println("Â¦¼öÀÇ ÃÑÇÕ = " + sum3 + ", È¦¼öÀÇ ÃÑÇÕ = " + sum4 + " ÃÑ ÇÕ =" + (sum3+sum4));
+		System.out.println(sum3);
 		// 7!
-		
 	}
 }

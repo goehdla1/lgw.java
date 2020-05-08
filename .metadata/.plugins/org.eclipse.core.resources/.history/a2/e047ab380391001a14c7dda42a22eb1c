@@ -121,54 +121,28 @@ public class Ex07 {
 		int sum = 0;
 		while (v1 < 11) {
 			sum = sum + v1;
-
+			
 			v1++;
 		}
 		System.out.println(sum);
 		// 0 - 10 È¦¼öÀÇ ÇÕ°è.
-
+		
 		int v2 = 0;
 		int sum1 = 0;
 		while (v2 < 11) {
 			if (v2 % 2 == 1) {
-				sum1 = sum1 + v2;
-
+				sum1 = sum1 + v2 ;
+				System.out.println(sum1);
 			}
-
+			
+			
 			v2++;
 		}
-		System.out.println(sum1);
 
 		// 0 - 10 Â¦¼öÀÇ ÇÕ°è.
-		
-		int v3 = 0;
-		int sum2 = 0;
-		while (v3 < 11) {
-			if (v3 % 2 == 0) {
-				sum2 = sum2 + v3;
-
-			}
-
-			v3++;
-		}
-		System.out.println(sum2);
 
 		// 0 - 10 È¦¼ö,Â¦¼öÀÇ ÇÕ°è
-		int sum3 = 0 ;
-		int sum4 = 0 ;
-		int v4 = 0 ;
-		while (v4 < 11) {
-			if (v4 % 2 == 0) {
-			sum3 = sum3 + v4;
-				
-				
-			} else {sum4 = sum4 + v4;
-				
-			}
-			v4++;
-		}
-		System.out.println("Â¦¼öÀÇ ÃÑÇÕ = " + sum3 + ", È¦¼öÀÇ ÃÑÇÕ = " + sum4 + " ÃÑ ÇÕ =" + (sum3+sum4));
+
 		// 7!
-		
 	}
 }

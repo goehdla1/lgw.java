@@ -169,6 +169,5 @@ public class Ex07 {
 		}
 		System.out.println("Â¦¼öÀÇ ÃÑÇÕ = " + sum3 + ", È¦¼öÀÇ ÃÑÇÕ = " + sum4 + " ÃÑ ÇÕ =" + (sum3+sum4));
 		// 7!
-		
 	}
 }

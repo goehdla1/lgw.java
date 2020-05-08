@@ -154,21 +154,7 @@ public class Ex07 {
 		System.out.println(sum2);
 
 		// 0 - 10 È¦¼ö,Â¦¼öÀÇ ÇÕ°è
-		int sum3 = 0 ;
-		int sum4 = 0 ;
-		int v4 = 0 ;
-		while (v4 < 11) {
-			if (v4 % 2 == 0) {
-			sum3 = sum3 + v4;
-				
-				
-			} else {sum4 = sum4 + v4;
-				
-			}
-			v4++;
-		}
-		System.out.println("Â¦¼öÀÇ ÃÑÇÕ = " + sum3 + ", È¦¼öÀÇ ÃÑÇÕ = " + sum4 + " ÃÑ ÇÕ =" + (sum3+sum4));
+
 		// 7!
-		
 	}
 }
