@@ -170,5 +170,12 @@ public class Ex07 {
 		System.out.println("Â¦¼öÀÇ ÃÑÇÕ = " + sum3 + ", È¦¼öÀÇ ÃÑÇÕ = " + sum4 + " ÃÑ ÇÕ =" + (sum3+sum4));
 		// 7!
 		
+		int v5 = 7;
+		int ss = 1;
+		while (v5 > 0) {
+			ss = ss * v5;
+			v5--;
+		}
+		System.out.println("7! = " + ss);
 	}
 }
