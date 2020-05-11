@@ -27,12 +27,13 @@ public class Ex07 {
 					dan = 4000;
 			
 		}
-		int output = input - 
-				int vat = (dan*1.1);
+		
+				int vat = (int)(dan*1.1);
+				int output = (input-vat);
 		
 		
 		System.out.println("ÀÔ±İ¾×: " + input);
-		System.out.println("¼±ÅÃÇÑ À½·á : " + menu);
-		System.out.println("ÀÜµ·Àº ? : " + );
+		System.out.println("¼±ÅÃÇÑ À½·á : " + drink);
+		System.out.println("ÀÜµ·Àº ? : " + output );
 	}
 }
