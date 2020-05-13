@@ -30,7 +30,7 @@ public class Ex07 {
 		
 		// 다차원 고정(가변)길이 배열의 출력
 		for (int i = 0; i < su.length; i++) {
-			for (int j = 0; j < su[i].length; j++) { // = > j < su[i].length su의 i방 의 길이.
+			for (int j = 0; j < su[i].length; j++) { // = > j < su[i].length su의 i방 의 길이. 주소를 알면 길이를 알수 있다.
 				System.out.println(su[i][j]);
 				
 			}
