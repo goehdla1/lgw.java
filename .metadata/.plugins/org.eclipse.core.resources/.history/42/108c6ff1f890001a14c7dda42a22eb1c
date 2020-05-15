@@ -1,8 +1,0 @@
-package com.ict.edu;
-
-public class Ex08 {
-	public static void main(String[] args) {
-		// 중첩 while 문 : while문 안에 while문
-		// 다중 for문과 같다.
-	}
-}

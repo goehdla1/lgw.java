@@ -10,8 +10,19 @@ public class Ex02 {
 		final int math = 90; 		// 인스턴스 상수 
 		final static int com = 91;  // static 상수 (보통 상수 표현)
 		
-
-
+		// 변수와 상수의 차이
+		// 메소드 : 기능 , 동작 , 실행
+		// 메소드 구성 : 접근제한자 , 메소드종류 , 반환형 , 메소드이름([인자]){실행내용}
+		// void 는 되돌아갈때 결과가 없다.
+		public void prn() {
+			// 변수이기 때문에 변경가능
+			kor = kor + 10;
+			eng = eng + 10;
+			// 상수이기 때문에 변경하면 오류 발생.
+			// math = math + 10;
+			// com = com + 10;
+			
+		}
 
 
 
