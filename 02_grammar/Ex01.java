@@ -11,7 +11,7 @@ class Ex01{
 		//3. 데이터를 가지고 있는 변수 출력하기
 		System.out.println(result);
 
-		// result = true;
+		 result = true;
 		System.out.println(result);	
 
 		// result = 10;

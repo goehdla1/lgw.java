@@ -9,6 +9,6 @@ class Ex02{
 	
 	// 선언만하고 데이터를 저장하지 않았음.
 	// boolean res2;
-	// System.out.println(res2);
+	 //System.out.println(res2);
 	}		
 }
