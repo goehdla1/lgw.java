@@ -24,4 +24,7 @@
 <fullyQualifiedTypeName name="com.ict.edu.Ex01_sup"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="com.ict.edu.Ex03"/>
+<fullyQualifiedTypeName name="com.ict.edu2.GamePhone"/>
+<fullyQualifiedTypeName name="com.ict.edu2.DcaPhone"/>
+<fullyQualifiedTypeName name="com.ict.edu2.Mp3Phone"/>
 </qualifiedTypeNameHistroy>

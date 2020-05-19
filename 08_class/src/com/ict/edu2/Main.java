@@ -22,5 +22,15 @@ public class Main {
 		gp.play();   // 자식
 		
 		System.out.println("=============================");
+		
+		Phone p1 =new DcaPhone(); // 부모 클래스에 자식 생성자도 가능.
+		p1.call(); // 부모
+		p1.sms();  // 부모
+		//p1.dca();   자식 멧호두는 못쓴다.
+		
+		Phone p2 = new Mp3Phone();
+		p2.call(); // 부모
+		p2.sms();  // 부모
+		//p2.sound();  자식 멧호듀는 못써
 	}
 }
