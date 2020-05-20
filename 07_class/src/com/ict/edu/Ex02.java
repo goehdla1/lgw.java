@@ -352,15 +352,15 @@ public class Ex02 {
 		System.out.println(message + 10);
 		System.out.println(m5 + 10);
 		System.out.println("==========================================================================");
-		
+
 		// 20-6. 문자열을 char로 변경 : X
-		//		 String.charAt() 사용
+		// String.charAt() 사용
 		message = "A";
 		char m6 = message.charAt(0);
 		System.out.println(message);
 		System.out.println(m6);
 		System.out.println("==========================================================================");
-		
+
 		// 21. toCharArray() char[]
 		// - 해당문자열을 char[]로 만들어줌
 		// - 모든 문자 사용 가능 (getBytes()는 영어와 숫자만 가능)
@@ -368,15 +368,14 @@ public class Ex02 {
 		byte[] m7 = message.getBytes();
 		for (byte k : m7) {
 			System.out.println(k);
-			
-			
+
 		}
 		System.out.println("==========================================================================");
-		
+
 		char[] m8 = message.toCharArray();
 		for (char k : m8) {
 			System.out.println(k);
-			
+
 		}
 		System.out.println("==========================================================================");
 	}

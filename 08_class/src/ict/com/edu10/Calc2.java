@@ -1,6 +1,6 @@
 package ict.com.edu10;
 
-public class Calc2 implements Add , Sub{
+public class Calc2 implements Add, Sub {
 
 	@Override
 	public double plus(double s1, double s2) {
