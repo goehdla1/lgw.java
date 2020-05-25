@@ -2,6 +2,7 @@ package com.ict.edu;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class Ex09 {
@@ -43,5 +44,37 @@ public class Ex09 {
 			System.out.println("존재하지 않음");
 		}
 		System.out.println(list);
+		System.out.println("==================================================");
+
+		if (vector.contains("기성룡")) {
+			System.out.println(vector.indexOf("기성룡") + "기성룡 위치");
+			System.out.println(vector.get(2));
+			System.out.println(vector.lastIndexOf("기성룡") + "번째 위치");
+			System.out.println(vector.elementAt(1));
+			System.out.println(vector.firstElement());
+			System.out.println(vector.lastElement());
+
+		}
+		// 치환
+		vector.set(1, "차두리");
+		vector.setElementAt("박세리", 2);
+		System.out.println(vector);
+		
+		//크기
+		System.out.println(list.size());
+		System.out.println(vector.size());
+		
+		// 출력
+		for (String k : list) {
+			System.out.println(k);
+			
+		}
+		System.out.println("====================================================");
+		Iterator<String> it = vector.iterator();
+		while (it.hasNext()) {
+			String res = (String) it.next();
+			System.out.println(res);
+			
+		}
 	}
 }

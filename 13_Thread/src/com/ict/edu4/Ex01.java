@@ -1,0 +1,41 @@
+package com.ict.edu4;
+
+// 데몬 스레드 : 일반 스레드의 작업을 돕는 보조적인 역할을 수행하는 스레드.
+//				 일반 스레드가 종료하면 데몬 스레드는 강제적으로 종료 된다.
+
+public class Ex01 implements Runnable {
+	boolean autoSave = false;
+
+	@Override
+	public void run() {
+		while (true) {
+			try {
+				// 1000분에 1초다 . 즉 3초동안 쉬어.
+				Thread.sleep(1000 * 3);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println(1);
+
+		}
+	}
+
+	public static void main(String[] args) {
+		Ex01 e1 = new Ex01();
+		Thread thread = new Thread(e1);
+		thread.setDaemon(true); // main 메소드 일이 끝나면 . 종속되어 있는 스레드는 자동 종료 시킨다.
+		thread.start();
+
+		for (int i = 1; i < 15; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+
+			}
+			System.out.println(i);
+		}
+
+		System.out.println("프로그램 종료");
+	}
+
+}
