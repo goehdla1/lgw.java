@@ -16,7 +16,8 @@ public class Test_Main {
 		// 방법 1 : Runnable을 상속받은 객체를 Thread 생성자에 넣어준다.
 		Thread thread = new Thread(testA);
 		thread.start();
-
+	
+		
 		// 위에 두개를 하나로 합친것.
 		new Thread(testB).start();
 
@@ -30,6 +31,15 @@ public class Test_Main {
 
 				}
 
+			}
+		}).start();
+		
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+			System.out.println(Thread.currentThread().getName() + " 가가가가가가가가");
+				
 			}
 		}).start();
 	}

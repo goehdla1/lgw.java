@@ -15,7 +15,7 @@ public class Ex02 {
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("¼ö°í : " + Thread.currentThread().getName());

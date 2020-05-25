@@ -44,7 +44,7 @@ public class Ex01_Test {
 		int res = t1.sub(1, 5);
 
 		// expected=> 예상값, => 결과값
-		assertEquals(-4, res);
+		assertEquals(10, res);
 	}
 
 	// 테스트 실행 후

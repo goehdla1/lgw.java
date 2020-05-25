@@ -4,6 +4,7 @@ public class Ex02 {
 
 	public void play() {
 		System.out.println(Thread.currentThread().getName());
+	
 		System.out.println("Ex02ÀÇ play()");
 	}
 

@@ -7,12 +7,12 @@ public class Ex02 {
 		String msg = "4";
 
 		test.setData(msg);
-		System.out.println(1);j
-		String msg2 = test.setData(msg);
+		System.out.println(1);
+		 msg = test.setData(msg);
 		System.out.println(2);
-		int msg3 = Integer.parseInt(msg2);
+		int msg3 = Integer.parseInt(msg);
 		for (int i = 1; i < 10; i++) {
-			System.out.println(msg2 + " * " + i + " =" + (msg3 * i));
+			System.out.println(msg + " * " + i + " =" + (msg3 * i));
 
 		}
 
