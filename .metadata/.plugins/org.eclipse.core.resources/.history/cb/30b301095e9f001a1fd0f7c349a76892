@@ -1,0 +1,18 @@
+package com.ict.edu5;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) {
+
+		String pathName = "C" + File.separator + "study" + File.separator + "test2.txt";
+		File file = new File(pathName);
+		
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

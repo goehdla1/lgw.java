@@ -1,0 +1,11 @@
+package com.ict.edu5;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) {
+
+		String pathName = "C" + File.separator + "study";
+	}
+
+}

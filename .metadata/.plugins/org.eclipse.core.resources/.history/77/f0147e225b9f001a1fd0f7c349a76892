@@ -1,0 +1,40 @@
+package com.ict.edu5;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Test {
+	public static void main(String[] args) {
+		// 읽는 위치
+		String pathName = "C:" + File.separator + "study" + File.separator + "고양이.jpeg";
+		File file = new File(pathName);
+
+		// 쓰는 위치
+		String pathName2 = "C:" + File.separator + "고양이.jpeg";
+		File file2 = new File(pathName);
+
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+		int k = 0;
+		try {while (k=) {
+			
+		}
+		
+
+		} catch (Exception e) {
+
+		} finally {
+			try {
+				if (fis != null)
+					fis.close();
+				if (fos != null)
+					fos.close();
+
+			} catch (Exception e2) {
+
+			}
+		}
+	}
+
+}

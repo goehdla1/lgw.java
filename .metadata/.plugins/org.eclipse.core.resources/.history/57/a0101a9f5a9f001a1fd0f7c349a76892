@@ -1,0 +1,28 @@
+package com.ict.edu5;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) {
+		// 읽는 위치
+		String pathName = "C:" + File.separator + "study" + File.separator + "text.txt";
+		File file = new File(pathName);
+
+		// 쓰는 위치
+		String pathName2 = "C:" + File.separator + "text.txt";
+		File file2 = new File(pathName);
+
+		try {
+
+		} catch (Exception e) {
+
+		} finally {
+			try {
+
+			} catch (Exception e2) {
+
+			}
+		}
+	}
+
+}

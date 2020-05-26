@@ -1,0 +1,34 @@
+package com.ict.edu5;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+
+public class Test {
+	public static void main(String[] args) {
+
+		String pathName = "C" + File.separator + "study";
+		File file = new File(pathName);
+
+		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+		try {
+			fos = new FileOutputStream(file);
+			bos = new BufferedOutputStream(fos);
+
+		} catch (Exception e) {
+
+		} finally {
+			try {
+				if (bos != null)
+					bos.close();
+				if (fos != null)
+					fos.close();
+
+			} catch (Exception e2) {
+
+			}
+		}
+	}
+
+}

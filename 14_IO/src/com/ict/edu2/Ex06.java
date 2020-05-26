@@ -1,5 +1,7 @@
 package com.ict.edu2;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,10 +18,15 @@ public class Ex06 {
 		File file2 = new File(pathname2);
 
 		FileInputStream fis = null;
+		BufferedInputStream bis = null;
 		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+
 		try {
 			fis = new FileInputStream(file);
+			bis = new BufferedInputStream(fis);
 			fos = new FileOutputStream(file2);
+			bos = new BufferedOutputStream(fos);
 			int k = 0;
 			// 동영상 , 사진 파일은 이렇게 써야한다.
 			while ((k = fis.read()) != -1) {
@@ -30,8 +37,12 @@ public class Ex06 {
 
 		} finally {
 			try {
+				if (bos != null)
+					bos.close();
 				if (fos != null)
 					fos.close();
+				if (bis != null)
+					bis.close();
 				if (fis != null)
 					fis.close();
 			} catch (Exception e2) {
