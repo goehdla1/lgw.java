@@ -11,7 +11,9 @@ public class Producer implements Runnable {
 	public void run() {
 		String carName = null;
 		for (int i = 0; i < 20; i++) {
+			// 자동차생산
 			carName = car.getCar();
+			// 차를 넣어줘야지.?
 			car.push(carName);
 			try {
 				Thread.sleep((int) (Math.random() * 200));
