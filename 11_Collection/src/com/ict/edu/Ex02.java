@@ -101,23 +101,24 @@ public class Ex02 {
 		while (it2.hasNext()) {
 			char cr = (char) it2.next();
 			System.out.print(cr + " ");
-	
+
 		}
 		System.out.println();
-		System.out.println("==============================================================================================");
-		
+		System.out.println(
+				"==============================================================================================");
+
 		for (String str : h5) {
 			System.out.print(str + " ");
-			
+
 		}
 		System.out.println();
-		
+
 		Iterator<String> it3 = h5.iterator();
 		while (it3.hasNext()) {
 			String str = (String) it3.next();
 			System.out.print(str + " ");
-			
+
 		}
 	}
-	
+
 }
