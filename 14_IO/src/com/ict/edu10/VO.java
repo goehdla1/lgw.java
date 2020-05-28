@@ -7,37 +7,58 @@ import java.io.ObjectOutput;
 
 public class VO implements Externalizable {
 	private String name;
-	private int age;
-	private double weight;
-	private boolean gender;
+	private int kor;
+	private int eng;
+	private int math;
+	private int sum;
+	private double avg;
+	private String hak;
 
 	@Override
 	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+
 		name = (String) in.readObject();
-		age = (int) in.readObject();
-		weight = (double) in.readObject();
-		gender = (boolean) in.readObject();
+		kor = (int) in.readObject();
+		eng = (int) in.readObject();
+		math = (int) in.readObject();
+		sum = (int) in.readObject();
+		avg = (int) in.readObject();
+		hak = (String) in.readObject();
 
 	}
 
 	@Override
 	public void writeExternal(ObjectOutput out) throws IOException {
-		out.writeObject(name);
-		out.writeObject(age);
-		out.writeObject(weight);
-		out.writeObject(gender);
 
+		out.writeObject(name);
+		out.writeObject(kor);
+		out.writeObject(eng);
+		out.writeObject(math);
+		out.writeObject(sum);
+		out.writeObject(avg);
+		out.writeObject(hak);
 	}
 
 	public VO() {
 	}
 
-	public VO(String name, int age, double weight, boolean gender) {
-		super();
+	public VO(String name, int kor, int eng, int math) {
+
 		this.name = name;
-		this.age = age;
-		this.weight = weight;
-		this.gender = gender;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+
+		sum = kor + eng + math;
+		avg = (int) (sum / 3.0 * 10) / 10.0;
+		if (avg >= 90) {
+			hak = "A";
+		} else if (avg >= 80) {
+			hak = "B";
+		} else {
+			hak = "F";
+		}
+
 	}
 
 	public String getName() {
@@ -48,27 +69,52 @@ public class VO implements Externalizable {
 		this.name = name;
 	}
 
-	public int getAge() {
-		return age;
+	public int getKor() {
+		return kor;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setKor(int kor) {
+		this.kor = kor;
 	}
 
-	public double getWeight() {
-		return weight;
+	public int getEng() {
+		return eng;
 	}
 
-	public void setWeight(double weight) {
-		this.weight = weight;
+	public void setEng(int eng) {
+		this.eng = eng;
 	}
 
-	public boolean isGender() {
-		return gender;
+	public int getMath() {
+		return math;
 	}
 
-	public void setGender(boolean gender) {
-		this.gender = gender;
+	public void setMath(int math) {
+		this.math = math;
 	}
+
+	public int getSum() {
+		return sum;
+	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+
+	public double getAvg() {
+		return avg;
+	}
+
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+
+	public String getHak() {
+		return hak;
+	}
+
+	public void setHak(String hak) {
+		this.hak = hak;
+	}
+
 }

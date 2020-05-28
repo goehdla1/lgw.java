@@ -18,50 +18,37 @@ public class Input {
 		BufferedInputStream bis = null;
 		ObjectInputStream ois = null;
 
-		String pathname2 = "C:" + File.separator + "study" + File.separator + "util" + File.separator + "io15.txt";
-		File file2 = new File(pathname);
-		FileWriter fw = null;
-		BufferedWriter bw = null;
-
 		try {
 			fis = new FileInputStream(file);
 			bis = new BufferedInputStream(fis);
 			ois = new ObjectInputStream(bis);
 
-			fw = new FileWriter(file2);
-			bw = new BufferedWriter(fw);
-
+			// 만들어진대로 역으로 만든다. output에서 list를 사용했기떄문에 .
 			ArrayList<VO> list = (ArrayList<VO>) ois.readObject();
-			System.out.println("이름\t나이\t몸무게\t성별");
+
+			System.out.println("이름\t총점\t평균\t학점");
 			for (VO k : list) {
 				System.out.print(k.getName() + "\t");
-				System.out.print(k.getAge() + "\t");
-				System.out.print(k.getWeight() + "\t");
-				System.out.println(k.isGender() + "\t");
-
-				bw.write(k.getName() + "\t");
-				bw.write(k.getAge() + "\t");
-				bw.write(k.getWeight() + "\t");
-				bw.write(k.isGender() + "\t");
+				System.out.print(k.getSum() + "\t");
+				System.out.print(k.getAvg() + "\t");
+				System.out.println(k.getHak() + "\t");
 
 			}
-			bw.flush();
 
 		} catch (Exception e) {
 
 		} finally {
+			try {
+				ois.close();
+				bis.close();
+				fis.close();
+
+			} catch (Exception e) {
+
+			}
 
 		}
-		try {
-			ois.close();
-			bis.close();
-			fis.close();
-			bw.close();
-			fw.close();
 
-		} catch (Exception e) {
-
-		}
 	}
 
 }

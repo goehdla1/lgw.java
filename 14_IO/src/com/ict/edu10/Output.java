@@ -11,11 +11,11 @@ public class Output {
 	public static void main(String[] args) {
 		String pathname = "C:" + File.separator + "study" + File.separator + "util" + File.separator + "io14.txt";
 		File file = new File(pathname);
-		Scanner sc = new Scanner(System.in);
+
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 		ObjectOutputStream oos = null;
-
+		Scanner sc = new Scanner(System.in);
 		try {
 			fos = new FileOutputStream(file);
 			bos = new BufferedOutputStream(fos);
@@ -26,28 +26,22 @@ public class Output {
 			esc: while (true) {
 				System.out.println("이름이 무엇이니?");
 				String name = sc.next();
-				System.out.println("나이?");
-				int age = sc.nextInt();
-				System.out.println("몸무게?");
-				double weight = sc.nextDouble();
-				System.out.println("성별?");
-				boolean gender = sc.nextBoolean();
-				VO vo = new VO(name, age, weight, gender);
+				System.out.println("국어?");
+				int kor = sc.nextInt();
+				System.out.println("수학?");
+				int eng = sc.nextInt();
+				System.out.println("영어?");
+				int math = sc.nextInt();
+				VO vo = new VO(name, kor, eng, math);
 				list.add(vo);
-				while (true) {
-					System.out.println("계속 할까요? 1.yet  2.no");
-					int su = sc.nextInt();
-					if (su == 1) {
-						continue esc;
+				System.out.println("계속 할까요? y/n");
+				String str = sc.next();
 
-					} else if (su == 2) {
-						break;
-
-					}
-
-				}
-
+				if (str.equalsIgnoreCase("n"))
+					break;
 			}
+			oos.writeObject(list);
+			oos.flush();
 		} catch (Exception e) {
 
 		} finally {
