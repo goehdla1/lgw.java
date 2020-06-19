@@ -1,4 +1,4 @@
-package com.ict.edu5;
+package com.ict.edu2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,11 +11,11 @@ public class Ex01 {
 		System.out.println("IDX\tID\tPW\tNAME\tAGE\tREG");
 		for (VO vo : list) {
 			System.out.print(vo.getIdx() + "\t");
-			System.out.print(vo.getM_id() + "\t");
-			System.out.print(vo.getM_pw() + "\t");
-			System.out.print(vo.getM_name() + "\t");
-			System.out.print(vo.getM_age() + "\t");
-			System.out.println(vo.getM_reg());
+			System.out.print(vo.getId() + "\t");
+			System.out.print(vo.getPw() + "\t");
+			System.out.print(vo.getName() + "\t");
+			System.out.print(vo.getAge() + "\t");
+			System.out.println(vo.getReg());
 		}
 	}
 
@@ -38,19 +38,22 @@ public class Ex01 {
 			break;
 		case 2:
 			System.out.println("정보를 입력하세요");
+			System.out.print("idx : ");
+			String idx = sc.next();
+
 			System.out.print("아이디 : ");
-			String m_id = sc.next();
+			String id = sc.next();
 
 			System.out.print("패스워드 : ");
-			String m_pw = sc.next();
+			String pw = sc.next();
 
 			System.out.print("이름 : ");
-			String m_name = sc.next();
+			String name = sc.next();
 
 			System.out.print("나이 : ");
-			String m_age = sc.next();
+			String age = sc.next();
 
-			list = DAO.getInstance().getInsert(m_id, m_pw, m_name, m_age);
+			list = DAO.getInstance().getInsert(idx, id, pw, name, age);
 			listPrn(list);
 			break;
 		case 3:
@@ -59,8 +62,8 @@ public class Ex01 {
 			System.out.println();
 			System.out.print("삭제할 IDX : ");
 			System.out.println();
-			String idx = sc.next();
-			list = DAO.getInstance().getDelete(idx);
+			String idx1 = sc.next();
+			list = DAO.getInstance().getDelete(idx1);
 			listPrn(list);
 			break;
 		case 4:
@@ -70,9 +73,9 @@ public class Ex01 {
 			System.out.print("갱신할 IDX : ");
 			String idx2 = sc.next();
 			System.out.print("갱신할 나이 : ");
-			String age = sc.next();
+			String age1 = sc.next();
 			System.out.println();
-			list = DAO.getInstance().getUpdate(idx2, age);
+			list = DAO.getInstance().getUpdate(idx2, age1);
 			listPrn(list);
 			break;
 		case 5:
